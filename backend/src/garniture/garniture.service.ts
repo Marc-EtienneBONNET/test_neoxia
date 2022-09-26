@@ -9,7 +9,6 @@ export class GarnitureService {
     @InjectRepository(Garniture)
     readonly garnitureRepository: Repository<Garniture>,
   ) {}
-
   async takeAllGarniture() {
     return await this.garnitureRepository.find();
   }

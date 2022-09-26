@@ -34,6 +34,7 @@ export class CommandeService {
     });
     this.CommandeRepository.remove(tmp);
   }
+
   async mouvEtat(id) {
     const tmp = await this.CommandeRepository.findOneBy({
       id: id,
