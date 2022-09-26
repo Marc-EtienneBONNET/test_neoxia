@@ -1,0 +1,78 @@
+.btn_commande{
+    margin : 14px;
+    padding: 1rem 1rem;
+    font-size: 30px;
+}
+
+input[type="checkbox"] 
+{
+    display: none;
+}
+
+.my_check_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+
+input[type="checkbox"] + label 
+{
+    padding: 1rem 1rem;
+    border: 2px solid var(--primary);
+    border-radius: 20px;
+    color: var(--primary);
+    background-color: var(--gray_2);
+    font-size: 30px;
+    vertical-align:middle;
+    text-align: center;
+    cursor:pointer;
+    transition: 0.3s background-color;
+    &:hover{
+        background-color: var(--primary);
+        color: var(--gray_2);
+    }
+}
+
+input[type="checkbox"]:checked + label 
+{
+   background-color: var(--primary);
+   color: var(--gray_2);
+}
+
+.for_form{
+    margin: 20px;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.grille_client_ligne{
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(3,30%);
+    gap:20px;
+    align-items: center;
+
+}
+
+.grille_client_colone{
+    display: grid;
+    grid-template-columns: repeat(1,100%);
+    text-align: center;
+}
+
+.input_name{
+    margin : 14px;
+    padding: 1rem 1rem;
+    font-size: 30px;
+    background-color: var(--gray_2);
+}
+
+
+
+
+
+

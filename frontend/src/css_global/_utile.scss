@@ -1,0 +1,32 @@
+.input_text{
+    background-color: white;
+    color: var(--primary);
+    border : 1px solid var(--primary);
+    border-radius: 5px;
+}
+
+.btn{
+    background-color: var(--primary);
+    color: var(--gray_2);
+    border : 1px solid var(--primary);
+    border-radius: 5px;
+    cursor:pointer;
+    transition: 0.3s background-color;
+    &:hover{
+        background-color: var(--gray_2);
+        color: var(--primary);
+    }
+}
+
+.btn_revers{
+    background-color: var(--gray);
+    color: var(--primary);
+    border : 1px solid;
+    border-radius: 5px;
+    cursor:pointer;
+    transition: 0.3s background-color;
+    &:hover{
+        background-color: var(--primary);
+        color: var(--gray_2);
+    }
+}
