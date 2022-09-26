@@ -10,4 +10,20 @@ export class GarnitureController {
     const tmp = await this.garnitureService.takeAllGarniture();
     return tmp;
   }
+
+  @Get('takeByName:name')
+  async takeByName(@Param('name') name) {
+    const tmp = await this.garnitureService.takeByName(name);
+    return tmp;
+  }
+
+  @Post('addNew')
+  async addNewGar(@Body() body) {
+    await this.garnitureService.addNewGarniture(body.data);
+  }
+
+  @Post('supOne')
+  async supGar(@Body() body) {
+    await this.garnitureService.supGarniture(body.data);
+  }
 }

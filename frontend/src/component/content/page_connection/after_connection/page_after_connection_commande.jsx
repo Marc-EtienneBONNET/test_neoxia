@@ -4,6 +4,7 @@ import { useState } from "react";
 export default function AfterConnectionCommande()
 {
     let [cmd, mouvCmd] = useState([]);
+    let [see, mouvSee] = useState(false);
     let [filtre, mouvFiltre] = useState("");
     let [filtreBool, mouvFiltreBool] = useState(false);
 
@@ -101,6 +102,8 @@ export default function AfterConnectionCommande()
         else
             tmp = (await axios.get('http://localhost:3001/commande/takeAll')).data;
         index_max = tmp.length;
+        if (see === false)
+            index_max = 5;
         for (let i = 0; i < index_max && tmp[i]; i++)
             tmp_cmd.push(tmp[i]);
         if (comparTab(cmd, tmp_cmd) === -1)
@@ -116,6 +119,7 @@ export default function AfterConnectionCommande()
                 <input onInput={(e) => {handleOnInput(e)}} type="text" className="input_text input_text_filtre"></input>
                 <input onClick={() => {handleOnClickFiltre()}} type="button" value={filtreBool !== true ? "filtre" : "stop filtre"} className="btn"></input>
             </div>
+            <input onClick={() => mouvSee(!see)} type="button" value={see === true? "Voir toutes les commandes" : "Voir les 5 commandes"} className="btn btn_see_all_commande"></input>
             {cmd.map((element) => {return createMarcUpCommande(element)})}
         </div>
     );

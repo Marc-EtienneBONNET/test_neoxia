@@ -1,0 +1,46 @@
+Bonjour !
+
+Ici vous trouverais l'ensemble du projet fini avec en fonctionnalité et page :
+    -la page de connexion au front et l'entité Restaurateur (dossier user) au back.
+    -La page restaurateur, afin davoir la liste des commandes qui on etait passer
+    -J'ai ajouté la fonctionnalité permetant de suprimer les commandes (1 click = changement d'état de la commande (en attente -> en cours) et 2 click = supretion de la commande)
+    -J'ai ajouté la fonctionnalité de filtrage par alliment à la liste des commandes
+    -J'ai ajouté une fonctionalité pour ne voir que les 5 premier commande
+    -J'ai ajouté à la page restaurateur un menu lui permetant de choisir les garnitures qu'il propose à ses clients
+    -Un bouton de connexion (car la connexion est maintenu tent qu'il ne se deconnecte pas)
+
+Attention ! À votre arrivée sur le site, a database est vide, pour que le client puisse commander, il faut que le restaurateur propose au moins 1 aliment de chaque catégorie
+
+Compilation :
+    ./run.sh
+
+
+
+Port utilisez :
+    - 3000 (frontend)
+    - 3001 (backend)
+    - 5432 (database)
+
+Le site est orienté sur 2 pages :
+
+1) client
+    - Permet de prendre des commandes et de les envoyer au restaurateur
+
+2) restaurateur
+    - permet de créer un profil restaurateur
+    - permet de ce log sur sont profil restaurateur
+
+2.1) le profil restaurateur
+    - Permet de suivre l'arrivée des commandes
+    - Permet de changer l'état actuel de la commande (en attente, en cours, sup)
+    - Permet de choisir les garnitures, viande, sauce que le restaurateur propose à ses clients
+    - Permet de suprimer une commande distribuée (en cliquand 2 fois dessus)
+    - Permet de se déconnecter
+
+Les téchnologies : 
+    React -> front (avec jsx) 
+    Nest -> back (avec ts)
+    dockerfile -> pour les container
+
+Database : 
+    postgres
