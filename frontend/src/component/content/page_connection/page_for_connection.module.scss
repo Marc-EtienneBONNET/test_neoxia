@@ -1,0 +1,9 @@
+.grille_for_page_connection{
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    
+}

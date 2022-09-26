@@ -1,0 +1,26 @@
+
+
+.grille_creat_conte{
+    width: 50%;
+    margin-left:20%;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 30% 90%;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input_create_conte{
+    font-size: 30px;
+}
+
+.btn_create_conte{
+    padding: 10px;
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+.text_create_conte{
+    font-size: 20px;
+}

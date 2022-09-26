@@ -31,8 +31,6 @@ export default function HtmlClient()
     let [sauces, setSau] = useState([]);
     let [name, setNam] = useState("");
     let [tab_garniture, setTabGar] = useState([[],[],[]]);
-    let [tab_viande, setTabVia] = useState([]);
-    let [tab_sauce, setTabSau] = useState([]);
 
 
     async function handlePostNewKebab(e)

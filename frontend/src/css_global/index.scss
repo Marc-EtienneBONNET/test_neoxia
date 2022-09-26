@@ -5,3 +5,5 @@
 @use './_utile.scss';
 @use './../component/header/header.module.scss';
 @use './../component/content/page_client/page_client.scss';
+@use './../component/content/page_connection/befor_connection/page_befor_connection.scss';
+@use './../component/content/page_connection/page_for_connection.module.scss'

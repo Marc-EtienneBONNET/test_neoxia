@@ -8,9 +8,7 @@ export class SauceService {
   constructor(
     @InjectRepository(Sauce) readonly SauceRepository: Repository<Sauce>,
   ) {}
-
   async takeAllSauce() {
     return await this.SauceRepository.find();
   }
-
 }

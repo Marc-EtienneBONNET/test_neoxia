@@ -10,7 +10,6 @@ export class CommandeService {
     @InjectRepository(Commande)
     readonly CommandeRepository: Repository<Commande>,
   ) {}
-
   addNewCommande(name, garniture, viande, sauce) {
     if (name && garniture && viande && sauce) {
       const tmp = new Commande();

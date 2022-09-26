@@ -2,6 +2,7 @@ import { ConfigurableModuleBuilder, Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ViandeModule } from './viande/viande.module';
+import { UserModule } from './user/user.module';
 import { SauceModule } from './sauce/sauce.module';
 import { GarnitureModule } from './garniture/garniture.module';
 import { CommandeModule } from './commande/commande.module';
@@ -12,6 +13,7 @@ import { config } from './appData.conf';
   imports: [
     TypeOrmModule.forRoot(config),
     ViandeModule,
+    UserModule,
     SauceModule,
     GarnitureModule,
     CommandeModule,
