@@ -20,4 +20,13 @@ export class CommandeController {
       body.sauce,
     );
   }
+  @Post('supOne')
+  async supViande(@Body() body) {
+    await this.commandeService.supCommandeById(body.id);
+  }
+
+  @Post('mouvEtat')
+  async mouvEtat(@Body() body) {
+    await this.commandeService.mouvEtat(body.id);
+  }
 }

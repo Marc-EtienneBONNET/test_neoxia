@@ -10,10 +10,4 @@ export class ViandeController {
     const tmp = await this.viandeService.takeAllViande();
     return tmp;
   }
-
-  @Get('takeByName:name')
-  async takeByName(@Param('name') name) {
-    const tmp = await this.viandeService.takeByName(name);
-    return tmp;
-  }
 }

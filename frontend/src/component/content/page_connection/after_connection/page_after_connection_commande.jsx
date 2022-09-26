@@ -23,13 +23,18 @@ export default function AfterConnectionCommande()
 
     function createMarcUpCommande(element)
     {
+        let className;
         let garnitur = my_splite(element.garniture).map((e) => <p key={e}>{e}</p>);
         let viande = my_splite(element.viande).map((e) => <p key={e}>{e}</p>);
         let sauce = my_splite(element.sauce).map((e) => <p key={e}>{e}</p>);
+        if (element.etat === 'en attente')
+            className = 'oneComande'
+        else if (element.etat === 'en cours')
+            className = 'oneComande2'
         let myDate = new Date(element.date);
         let myStringDate = myDate.getDate() + "/" + myDate.getMonth() + "/" + myDate.getFullYear() + " " + myDate.getHours() + ":" + myDate.getMinutes();
         return (
-        <div onClick={(e) => handlePostSupCommande(e, element.id)} key={element.id}>
+        <div onClick={(e) => handlePostSupCommande(e, element.id)} className={className} key={element.id}>
             <p className="">{element.name}</p>
             <p className="">{myStringDate}</p>
             <p className="">{element.etat}</p>
@@ -85,6 +90,7 @@ export default function AfterConnectionCommande()
     return (
         <div style={{marginTop:"20px"}} className='commandes'>
             <h1>Vos commandes !</h1>
+            <h4>Clickez 1 fois sur la commande pour la passer en état 'en cours' et deux fois pour la suprimer des commandes en cours</h4>
             {cmd.map((element) => {return createMarcUpCommande(element)})}
         </div>
     );

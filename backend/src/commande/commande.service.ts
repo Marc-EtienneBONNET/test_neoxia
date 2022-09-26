@@ -27,4 +27,21 @@ export class CommandeService {
       this.CommandeRepository.save(tmp);
     }
   }
+
+  async supCommandeById(id) {
+    const tmp = await this.CommandeRepository.findOneBy({
+      id: id,
+    });
+    this.CommandeRepository.remove(tmp);
+  }
+  async mouvEtat(id) {
+    const tmp = await this.CommandeRepository.findOneBy({
+      id: id,
+    });
+    console.log(tmp);
+    if (tmp.etat === 'en attente') {
+      tmp.etat = 'en cours';
+      this.CommandeRepository.save(tmp);
+    } else if (tmp.etat === 'en cours') this.CommandeRepository.remove(tmp);
+  }
 }
