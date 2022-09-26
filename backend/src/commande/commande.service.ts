@@ -10,6 +10,11 @@ export class CommandeService {
     @InjectRepository(Commande)
     readonly CommandeRepository: Repository<Commande>,
   ) {}
+
+  async takeAllCommande() {
+    return await this.CommandeRepository.find();
+  }
+
   addNewCommande(name, garniture, viande, sauce) {
     if (name && garniture && viande && sauce) {
       const tmp = new Commande();

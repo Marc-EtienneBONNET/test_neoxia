@@ -95,7 +95,7 @@ export default function HtmlClient()
     return (
             <form > 
                 <div className="for_form" style={{marginTop: "50px"}}>
-                    <h3>Créer ton kebab !</h3>
+                    <h3>Créer</h3>
                     <br/>
                     {(tab_garniture[0].length > 0 && tab_garniture[1].length > 0 && tab_garniture[2].length > 0) ? <></> : <h4> (Attention! Vous devez proposer des garnitures à vos clients pour qu'il puisse commander)</h4>}
                 </div>

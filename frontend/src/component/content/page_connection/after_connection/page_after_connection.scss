@@ -1,0 +1,101 @@
+
+.oneComande{
+    border: 4px solid var(--primary); 
+    border-radius: 10px;
+    margin: 10px;
+    width: 90%;
+    text-align: center;
+    cursor:pointer;
+    transition: 0.3s background-color;
+    &:hover{
+        background-color: var(--primary);
+    }
+}
+
+.oneComande2{
+    border: 4px solid #70a1ff;
+    border-radius: 10px;
+    margin: 10px;
+    width: 90%;
+    text-align: center;
+    cursor:pointer;
+    transition: 0.3s background-color;
+    &:hover{
+        background-color: var(--primary);
+    }
+}
+
+.element{
+    font-size: 100%;
+}
+
+.grille_after_connection_prepa{
+    margin-top:20px;
+    padding:0px;
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(2,45%);
+    gap: 30px;
+}
+
+
+.grille_after_connection{
+    display: grid;
+    place-content: center;
+    grid-template-columns: 20% 70%;
+    gap: 20px;
+}
+
+.grille_after_connection_modif{
+    display: grid;
+    place-content: center;
+    grid-template-columns: 30% 30% 30%;
+    gap: 20px;
+}
+
+.modif{
+    text-align: center;
+    align-items: center;
+    margin-top: 10%;
+    background-color: white;
+    border-radius: 30px;
+
+}
+
+.grille_after_connection_commande{
+    padding:0px;
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(3,20%);
+    gap: 30px;
+}
+
+
+.garniture{
+    margin: 10px;
+    color: var(--gray_1);
+}
+
+.btn_see_all_commande{
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 100%;
+    width:100%;
+}
+
+.btn_deconnection{
+    margin-top: 2%;
+    font-size: 120%;
+}
+
+.input_text_filtre{
+    font-size: 30px;
+}
+
+.grille_input_filter{
+    padding:0px;
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(2,45%);
+    gap: 30px;
+}

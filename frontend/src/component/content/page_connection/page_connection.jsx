@@ -1,5 +1,6 @@
 import Befor_connection from './befor_connection/page_befor_connection'
 import For_connection from './for_connection/page_for_connection'
+import After_connection from './after_connection/page_after_connection'
 import { useState } from 'react';
 import axios from 'axios';
 
@@ -17,11 +18,18 @@ export default function HtmlConnection()
         return (tmp);
     }
     requette1();
+    if (is_connect === true)
+    {
+        page = <After_connection mouvConnect={mouvConnect}/>
+    }
+    else
+    {
         page = (
             <div className='grille_for_page_connection'>
                 <Befor_connection />
                 <For_connection mouvConnect={mouvConnect}/>
             </div>)
+    }
     return (
         <div>
             {page}

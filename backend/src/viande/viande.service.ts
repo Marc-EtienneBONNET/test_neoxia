@@ -12,4 +12,10 @@ export class ViandeService {
   async takeAllViande() {
     return await this.ViandeRepository.find();
   }
+
+  async takeByName(name) {
+    return await this.ViandeRepository.findOneBy({
+      name: name,
+    });
+  }
 }

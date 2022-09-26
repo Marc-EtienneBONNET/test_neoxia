@@ -2,7 +2,6 @@ import Content from '../content/content'
 import Footer from './../footer/footer'
 import Header from './../header/header'
 import { useState } from 'react'
-import axios from 'axios';
 
 
 
